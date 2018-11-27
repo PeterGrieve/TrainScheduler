@@ -37,7 +37,8 @@
     <!-- Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./assets/javascript/code.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+    
 </head>
 
 <body>
@@ -48,20 +49,27 @@
     </nav>
 
     <div class="row">
-        <form>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </form>
+        <div class="container">
+                <div id="time"></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Train Name</th>
+                        <th>Destination</th>
+                        <th>Frequency (min)</th>
+                        <th>Next Arrival</th>
+                        <th>Minutes Away</th>
+                    </tr>
+                </thead>
+
+                <tbody id="trainInfo"></tbody>
+            </table>
+        </div>
     </div>
 
     <div class="row">
         <div class="container">
-                <h2>Add Train</h2>
+            <h2>Add Train</h2>
             <form>
                 <div class="input-field col l12">
                     <h5>Train Name</h5>
@@ -74,7 +82,7 @@
                     <input id="frequency">
                 </div>
                 <div class="col l3">
-                    <button class="z-depth-5 btn waves-effect waves-light grey lighten-0 submit" type="submit" id="searchBtn">
+                    <button class="z-depth-5 btn waves-effect waves-light grey lighten-0 submit" type="submit" id="submitBtn">
                         <i class="material-icons right">send</i>Submit</button>
                 </div>
             </form>
